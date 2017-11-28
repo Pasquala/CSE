@@ -35,7 +35,9 @@ print("%s?! That's really old. You belong in a retirement home." % age)
 print('cheesebugers or hamburgers?')
 answer = input('>_')
 if answer == 'cheeseburgers':
-    then: print('Correct!')
-elif: answer == 'hamburgers'
+    then: print('Correct')
+
+elif answer == 'hamburgers':
     then: print '>_> what is wrong with you'
+
 else: print('I said cheesebugers or hamburgers >:C')
