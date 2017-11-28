@@ -1,5 +1,19 @@
-# print('Try to figure out how this works')
-# print(13 % 5)
+print('Hello world')
+
+#Jorge Guerrero
+
+a = 4
+b = 3
+
+print(3 + 5)
+print(5 - 3)
+print(3 * 5)
+print(6 / 2)
+print(3 ** 2)
+
+print()
+print('Try to figure out how this works')
+print(13 % 5)
 
 # the "%" sign is a modulus. It finds the remainder.
 
@@ -17,3 +31,11 @@ print("Hello %s" % name)
 
 age = input("How old are you?")
 print("%s?! That's really old. You belong in a retirement home." % age)
+
+print('cheesebugers or hamburgers?')
+answer = input('>_')
+if answer == 'cheeseburgers':
+    then: print('Correct!')
+elif: answer == 'hamburgers'
+    then: print '>_> what is wrong with you'
+else: print('I said cheesebugers or hamburgers >:C')
