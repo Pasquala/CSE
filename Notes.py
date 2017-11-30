@@ -25,6 +25,10 @@
 # print("I have a car called %s. It's pretty nice" % car_name)
 # print("I have a car called %s. It's a %s" % (car_name, car_type))
 
+
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
 # print("What is your name?")
 # name = input(">_ ")
 # print("Hello %s" % name)
@@ -42,6 +46,8 @@
 
 # else: print('I said cheeseburgers or hamburgers >:C')
 
+
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Function
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -90,21 +96,50 @@
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-def grade_calc(percentage):
-    if percentage >= 90:
-        return 'A'
-    elif percentage >= 80:
-        return 'B'
-    elif percentage >= 70:
-        return 'C'
-    elif percentage >= 60:
-        return 'D'
-    else:
-        return 'F'
+# def grade_calc(percentage):
+#     if percentage >= 90:
+#         return 'A'
+#     elif percentage >= 80:
+#         return 'B'
+#     elif percentage >= 70:
+#         return 'C'
+#     elif percentage >= 60:
+#         return 'D'
+#     else:
+#         return 'F'
 
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-print (grade_calc(100))
+# print (grade_calc(100))
 
-print('HERE AM UR TURTLESSSSSSSSSSSSSSSSSSSSSSSSSSSSS')
+# print('HERE AM UR TURTLESSSSSSSSSSSSSSSSSSSSSSSSSSSSS')
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+
+# def happy_birthday(name):
+#     if name == 'name':
+#         name = input('name ')
+#     print('Happy birthday to you!')
+#     print('Happy birthday to you!')
+#     print('Happy birthday dear %s,' % name)
+#     print('Happy birthday to you!')
+
+
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# happy_birthday('name')
+# happy_birthday('Pas')
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+# Loops
+
+# for num in range(10):
+#     print(num + 1)
+
+# a = 1
+# while a < 10:
+#     print(a)
+#     a += a
+
+
+import random
+print(random.randint(0, 10))
