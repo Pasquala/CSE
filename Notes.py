@@ -141,5 +141,19 @@
 #     a += a
 
 
-import random
-print(random.randint(0, 10))
+# import random
+# print(random.randint(0, 10))
+
+
+# Recasting
+# c = '1'
+# print(c ==1)  # we have a string and an in
+# print(int(c) == 1)
+# print(c == str(1))
+
+
+# Comparisons
+
+# print(1 ==1)  # Use a double equal sign
+# print(1 != 2)  # 1 is not equal to 2
+# print(not False)
