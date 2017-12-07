@@ -19,7 +19,9 @@ if choice_1 == 'TAKE_NAP':
         print('RUN FIGHT ACCEPT_FATE')
         wolf_fight = input('>_')
         if wolf_fight == 'RUN':
-            print("")
+            print("With a quick twist of your foot, you turn your whole body to where the biggest opening between the "
+                  "wolves. You run and run as far as you can hearing the barks of the wolves and the sound of their "
+                  "paws hitting the ground. You hear them gaining and you see up ahead something")
         elif wolf_fight == 'FIGHT':
             print("")
         elif wolf_fight == 'ACCEPT_FATE':

@@ -28,3 +28,15 @@
 
 
 # add(1, 2, 3)
+
+
+# 12.7.17
+
+
+# def repeat(item):
+#     print(item)
+#     print(item)
+#     print(item)
+
+
+# repeat('Hello world')
