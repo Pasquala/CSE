@@ -40,3 +40,13 @@
 
 
 # repeat('Hello world')
+
+
+# 12.8.17
+
+
+# def date(month, day, year):
+#     print('%s/%s/%s' % (month, day, year))
+
+
+# date(12, 8, 17)
