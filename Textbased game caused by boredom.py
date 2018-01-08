@@ -1,6 +1,7 @@
 import random
 import sys
 
+inv = {}
 
 print("You wake up in the middle of a small forest clearing, on top of a large tree stump with a soft bed of grass."
       " The soft glow of the moon illuminates your surroundings by a minute silver light.")
@@ -39,7 +40,7 @@ if choice_1 == 'LOOK_AROUND':
         print("You found a sturdy stick! Maybe you can use it for something.")
         inv_stick = True
     elif found_1 == 3:
-        print("You found a sharp chipped stone! This may be useful for bashing and cutting something.")
+        print("You found a sharp chipped stone! This may be useful for bashing and cutting something?")
         inv_stone = True
     elif found_1 == 5:
         print("You found a ")
