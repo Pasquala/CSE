@@ -15,10 +15,10 @@ def gamble():
         dice2 = random.randint(1,6)
         if dice1 + dice2 == 7:
             money += 5
-            print('The number is %d. Ya won. You have played %d rounds and have %d$' % (dice1 + dice2, rounds, money))
+            print('The number is %d. Ya won. You have played %d rounds and have $%d' % (dice1 + dice2, rounds, money))
             gamble()
         elif dice1 + dice2 != 7:
-            print('The number is %d. Ya lost. You have played %d rounds and have %d$.' % (dice1 + dice2, rounds, money))
+            print('The number is %d. Ya lost. You have played %d rounds and have $%d.' % (dice1 + dice2, rounds, money))
             gamble()
     else: print('Ya lost now git lost! It only took you %d games to be broke.' % rounds)
 

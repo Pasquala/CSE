@@ -50,3 +50,6 @@
 
 
 # date(12, 8, 17)
+
+# for chicken in range(100):
+#     print(chicken + 1)
