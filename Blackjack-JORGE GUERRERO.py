@@ -1,4 +1,5 @@
 import random
+import sys
 
 player_val = 0
 dealer_val = 0
@@ -10,33 +11,34 @@ deck = {'h_ace': 1, 'h_2': 2, 'h_3': 3, 'h_4': 4, 'h_5': 5, 'h_6': 6, 'h_7': 7, 
         'c_j': 10, 'c_q': 10, 'c_k': 10,
         's_ace': 1, 's_2': 2, 's_3': 3, 's_4': 4, 's_5': 5, 's_6': 6, 's_7': 7, 's_8': 8, 's_9': 9, 's_10': 10,
         's_j': 10, 's_q': 10, 's_k': 10}
-card = ''
+card = deck.popitem()
 card_val = 0
 
 
 def hit():
-    global player_val, dealer_val, deck, card, card_val
-    card, card_val = random.choice(list(d.keys()))
+    global player_val, dealer_val, deck, card_val
 
 
 def stay():
-    global player_val, dealer_val, deck, card, card_val
-
-
-def bust():
-    global player_val, dealer_val, deck, card, card_val
+    global player_val, dealer_val, deck, card_val
 
 
 def check():
-    global player_val, dealer_val, deck, card, card_val
+    global player_val, dealer_val, deck, card_val
 
 
 def game_start():
-    global player_val, dealer_val, deck, card, card_val
+    global player_val, dealer_val, deck, card_val
+    for x in range(2):
+        player_val += int(card_val)
+    print("(You draw two cards. Your cards add up to %d" % player_val)
     while player_val < 22 and dealer_val < 22:
         if player_val == 21 or dealer_val == 21:
             check()
         elif player_val < 22 and dealer_val < 22:
+            print("Ya both are bust!")
+            sys.exit()
+
 
 
 game_start()

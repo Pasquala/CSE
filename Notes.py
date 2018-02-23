@@ -4,13 +4,13 @@
 
 # b = 3
 # a = 4
-#
+
 # print(3 + 5)
 # print(5 - 3)
 # print(3 * 5)
 # print(6 / 2)
 # print(3 ** 2)
-#
+
 # print()
 # print('Try to figure out how this works')
 # print(13 % 5)
@@ -147,7 +147,7 @@
 
 # Recasting
 # c = '1'
-# print(c ==1)  # we have a string and an in
+# print(c ==1)  # we have a string and an int
 # print(int(c) == 1)
 # print(c == str(1))
 
@@ -157,3 +157,196 @@
 # print(1 ==1)  # Use a double equal sign
 # print(1 != 2)  # 1 is not equal to 2
 # print(not False)
+
+
+# Lists
+
+# the_count = [1, 2, 3, 4, 5]
+
+# extra_supreme_burger = ['mozzarella cheese', 'beef', 'chips', 'sesame seed buns', 'lettuce', 'crispy bacon',
+#                         'mac and cheese', 'swiss cheese', 'american cheese', 'provolone cheese', 'havarti cheese',
+#                         'any add ons']
+
+# print(extra_supreme_burger)
+# print(extra_supreme_burger[0])
+# print(extra_supreme_burger[2])
+# print(len(extra_supreme_burger))
+# print(len(the_count))
+
+
+# Going through lists
+
+# for extra_supreme_burger in extra_supreme_burger:
+#     print(extra_supreme_burger)
+
+# for num in the_count:
+#     print(num * 2)
+
+# length = len(extra_supreme_burger)
+# range(5)  # A list of numbers 1 through 4
+# range(len(extra_supreme_burger))  # Generates a list of all indices
+
+# for num in range(len(extra_supreme_burger)):
+#     item = extra_supreme_burger[num]
+#     print('The item at index %d is %s' % (num, item))
+
+
+# Recasting into a list
+
+# strOne = 'Hello World!'
+# listOne = list(strOne)
+# print(listOne)
+# listOne[11] = '.'
+# print(listOne)
+
+
+# Adding things to a list
+
+# extra_supreme_burger.append('bacon bowl mac and cheese')
+# print(extra_supreme_burger)
+
+
+# Removing things from a list
+
+# extra_supreme_burger.pop(8)
+# print(extra_supreme_burger)
+# extra_supreme_burger.remove('lettuce')
+# print(extra_supreme_burger)
+
+# Getting the alphabet
+
+# import string
+
+# print(string.ascii_letters)
+# print(string.ascii_lowercase)
+# print(string.punctuation)
+
+# Making things lowercase
+
+# strTwo = 'hElLo PeopLE hOw aM yOU?'
+# lowercase = strTwo.lower()
+# print(lowercase)
+
+
+# Dictionaries - Made up of key: value pair
+
+
+dictionary = {'name': 'Matthew', 'age': 14, 'height': 5 * 12}
+
+#  Accessing things from a dictionary
+
+# print(dictionary['name'])
+# print(dictionary['age'])
+# print(dictionary['height'])
+# dictionary['profession'] = 'telemarketer'
+
+# large_dictionary = {
+#     'CA': 'California',
+#     'AZ': 'Arizona',
+#     'NY': 'Mississippi',
+#     'OR': 'Oregon'
+# }
+
+# print(large_dictionary['NY'])
+
+# larger_dictionary = {
+#     'CA': [
+#         'Fresno',
+#         'San Francisco',
+#         'San Jose',
+#         'Sacramento',
+#         'California City',
+#         'Salinas'
+#     ],
+#     'AZ': [
+#         'Phoenix',
+#         'Tuscon'
+#     ],
+#     'NY': [
+#         'New York City',
+#         'Brooklyn'
+#     ],
+# }
+# print(larger_dictionary['NY'])
+# print(larger_dictionary['NY'][1])
+# print(larger_dictionary['AZ'][1])
+
+# largerer_dictionary = {
+#     'CA': {
+#         'NAME': 'California',
+#         'POPULATION': 39250000,
+#         'BORDER ST': [
+#             'Oregon',
+#             'Nevada',
+#             'Arizona'
+#         ]
+#     },
+#     'AZ': {
+#         'NAME': 'Arizona',
+#         'POPULATION': 6831000,
+#         'BORDER ST': [
+#             'California',
+#             'Utah',
+#             'Nevada',
+#             'New Mexico'
+#         ]
+#     },
+#     'NY': {
+#         'NAME': 'New York',
+#         'POPULATION': 19750000,
+#         'BORDER ST': [
+#             'Vermont',
+#             'Massachusetts',
+#             'Connecticut',
+#             'Pennsylvania',
+#             'New Jersey'
+#         ]
+#     }
+# }
+
+
+# current_node = largerer_dictionary['NY']
+# print(current_node['NAME'])
+# print(current_node['POPULATION'])
+
+# Defining functions
+
+
+# def hello_world():
+#     print('Hello world')
+
+
+# hello_world()
+
+
+# def square(base):
+#     return base ** 2
+
+
+# print(square(3))
+
+
+# def tip(bill):
+#     tax_amt = bill * 0.18
+#     total_bill = bill + tax_amt
+#     return total_bill
+
+
+# print(tip(100))
+
+
+# def distance_formula(x1, x2, y1, y2):
+#     inside = (x1 - x2) ** 2 + (y1 - y2) ** 2
+#     answer = inside ** 0.5
+#     return answer
+
+
+# print(distance_formula(0, 3, 0, 4))
+
+
+# def pythagorean_theorem(a, b):
+#     c = (a ** 2 + b ** 2) ** 0.5
+#     return c
+
+
+# print(pythagorean_theorem(5, 12))
