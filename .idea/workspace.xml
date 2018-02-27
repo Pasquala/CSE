@@ -27,7 +27,7 @@
       <file leaf-file-name="Class(pythonstuff)Notes- Jorge Guerrero.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Class(pythonstuff)Notes- Jorge Guerrero.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
+            <state relative-caret-position="1224">
               <caret line="72" column="107" lean-forward="false" selection-start-line="72" selection-start-column="107" selection-end-line="72" selection-end-column="107" />
               <folding />
             </state>
@@ -37,8 +37,8 @@
       <file leaf-file-name="DORK The legend of dork- Jorge Guerrero.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/DORK The legend of dork- Jorge Guerrero.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="646">
-              <caret line="38" column="12" lean-forward="false" selection-start-line="38" selection-start-column="12" selection-end-line="38" selection-end-column="12" />
+            <state relative-caret-position="311">
+              <caret line="30" column="100" lean-forward="true" selection-start-line="30" selection-start-column="100" selection-end-line="30" selection-end-column="100" />
               <folding />
             </state>
           </provider>
@@ -47,8 +47,8 @@
       <file leaf-file-name="Dictionary world map - Jorge Guerrero.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Dictionary world map - Jorge Guerrero.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1508">
-              <caret line="35" column="41" lean-forward="false" selection-start-line="35" selection-start-column="25" selection-end-line="35" selection-end-column="41" />
+            <state relative-caret-position="153">
+              <caret line="40" column="27" lean-forward="true" selection-start-line="40" selection-start-column="27" selection-end-line="42" selection-end-column="79" />
               <folding />
             </state>
           </provider>
@@ -74,14 +74,14 @@
         <option value="$PROJECT_DIR$/Warmups.py" />
         <option value="$PROJECT_DIR$/Lucky 7's.py" />
         <option value="$PROJECT_DIR$/Lucky 7's-JORGE GUERRERO.py" />
-        <option value="$PROJECT_DIR$/Blackjack-JORGE GUERRERO.py" />
         <option value="$PROJECT_DIR$/Textbased game caused by boredom.py" />
         <option value="$PROJECT_DIR$/DORK The legend of dork dictionary world map- Jorge Guerrerp.py" />
         <option value="$PROJECT_DIR$/Hangman - Jorge Guerrero.py" />
         <option value="$PROJECT_DIR$/PYTHAGOREAN THROEM- Jorge Guerrero.py" />
         <option value="$PROJECT_DIR$/Notes.py" />
-        <option value="$PROJECT_DIR$/Dictionary world map - Jorge Guerrero.py" />
         <option value="$PROJECT_DIR$/Class(pythonstuff)Notes- Jorge Guerrero.py" />
+        <option value="$PROJECT_DIR$/Dictionary world map - Jorge Guerrero.py" />
+        <option value="$PROJECT_DIR$/Blackjack-JORGE GUERRERO.py" />
         <option value="$PROJECT_DIR$/DORK The legend of dork- Jorge Guerrero.py" />
       </list>
     </option>
@@ -108,8 +108,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -121,6 +119,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -272,7 +272,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32176656" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32176656" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -570,13 +570,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Blackjack-JORGE GUERRERO.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="12" lean-forward="true" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Hangman - Jorge Guerrero.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="368">
@@ -601,24 +594,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Class(pythonstuff)Notes- Jorge Guerrero.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
+        <state relative-caret-position="1224">
           <caret line="72" column="107" lean-forward="false" selection-start-line="72" selection-start-column="107" selection-end-line="72" selection-end-column="107" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Blackjack-JORGE GUERRERO.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="8" column="59" lean-forward="false" selection-start-line="8" selection-start-column="59" selection-end-line="8" selection-end-column="59" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Dictionary world map - Jorge Guerrero.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1508">
-          <caret line="35" column="41" lean-forward="false" selection-start-line="35" selection-start-column="25" selection-end-line="35" selection-end-column="41" />
+        <state relative-caret-position="153">
+          <caret line="40" column="27" lean-forward="true" selection-start-line="40" selection-start-column="27" selection-end-line="42" selection-end-column="79" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DORK The legend of dork- Jorge Guerrero.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="38" column="12" lean-forward="false" selection-start-line="38" selection-start-column="12" selection-end-line="38" selection-end-column="12" />
+        <state relative-caret-position="311">
+          <caret line="30" column="100" lean-forward="true" selection-start-line="30" selection-start-column="100" selection-end-line="30" selection-end-column="100" />
           <folding />
         </state>
       </provider>

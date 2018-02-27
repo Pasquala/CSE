@@ -14,30 +14,38 @@ class Room(object):
         current_node = globals()[getattr(self,direction)]
 
 
-QUIETMEADOW_DESC = 'A beautiful serene meadow with a large rock in the middle. ' \
+# MEADOW AREA STARTS HERE!!!
+
+# MEADOW AREA DESCRIPTIONS START HERE!!!
+quietmeadow = 'A beautiful serene meadow with a large rock in the middle. ' \
                    'There is a sign in front of the rock stating "Today is the day! Go explore!"' \
                    ' \nNorth of the rock you see the meadow continues,' \
                    ' everywhere else has cliffs too harsh to climb even with proper tools'
+meadowentrance = 'The meadow starts fading into an open field. ' \
+                 'In the far north you see a building? ' \
+                 'To the west you see nothing but an impassable forest, ' \
+                 'south there is the meadow you woke up at, \nand to the east you see a what might be a lake.'
 
-QUIETMEADOW = Room('Quiet Meadow Valley', QUIETMEADOW_DESC, 'MEADOWENTRANCE', 'BLNK', 'BLNK', 'BLNK', 'BLNK', 'BLNK')
+# MEADOW AREA OBJECTS START HERE!!!
+QUIETMEADOW = Room('Quiet Meadow Valley', quietmeadow, 'MEADOWENTRANCE', '', '', '', '', '')
+MEADOWENTRANCE = Room('Meadow Entrance', meadowentrance, 'SOUTHFIELDS', 'LAKE', 'QUIETMEADOW', '', '', '')
 
-current_node = QUIETMEADOW()
+current_node = QUIETMEADOW
 directions = ['NORTH', 'EAST', 'SOUTH', 'WEST', 'UP', 'DOWN']
 
-print(current_node['NAME'] + ',' + '\n' + current_node['DESCRIPTION'])
-
 while True:
+    print(current_node.name)
     command = input('>_')
     if command == 'quit':
         quit(0)
-    if command == 'cheeseburger':
+    elif command == 'cheeseburger':
         print('DON\'T TRUST THE DUCKS!!!')
-    if command == 'fly':
+    elif command == 'fly':
         print('You cannot fly seeing as you are not a bird!')
-    if command.upper() in directions:
+    elif command.upper() in directions:
         try:
-            
-        except:
+            current_node.move(command)
+        except KeyError:
             print('You cannot go this way!')
     else:
         print('Command not recognized')
