@@ -53,10 +53,18 @@ westfields = 'You stand at the edge of a really green forest, you notice a consi
              'You look deeper into the forest and very easily hear the sound of a river rushing.\n' \
              'To the north, you can go behind the house. ' \
              'To the south you can return to the south of the fields or, you can go venture into the forest.'
+mansionentrance = 'Walking up the the mansion you see its intricate designs but see something more peculiar, ' \
+                  'the door is open enough that you can walk in.\n' \
+                  'By peeping through the open door you see a courtyard leading to the actual house which is a ' \
+                  'little farther north.\n' \
+                  'To the west you see the dense forest and can hear some sound coming from that area albeit faint. ' \
+                  'To the east you can see more of the desolate forest.'
 # FIELDS OBJECTS START HERE!!!
 SOUTHFIELDS = Room('Fields of Exploration, South', southfields, 'MANSIONENTRANCE', 'EASTFIELDS', 'MEADOWENTRANCE',
                    'WESTFIELDS', '', '')
 WESTFIELDS = Room('Fields of Exploration, West', westfields, 'BEHINDHOUSE', '', 'SOUTHFIELDS', 'LUSHENTRANCE', '', '')
+MANSIONENTRANCE = Room('Mansion Entrance', mansionentrance, 'COURTYARD', '', 'SOUTHFIELDS', '', '', '')
+
 
 current_node = QUIETMEADOW
 directions = ['NORTH', 'EAST', 'SOUTH', 'WEST', 'UP', 'DOWN']
