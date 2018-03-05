@@ -8,6 +8,7 @@ class Room(object):
         self.west = west
         self.up = up
         self.down = down
+        self.visited = False
 
     def move(self, direction):
         global current_node
@@ -27,11 +28,12 @@ meadowentrance = 'The meadow starts fading into an open field. ' \
                  'south there is the meadow you woke up at, \nand to the east you see a what might be a lake.'
 lake = 'You look around and see a massive lake with a strange rock in the south part of the pond. ' \
        'The lake is crystal clear and you can clearly look at your reflection.\n' \
-       'You might be able to swim to the strange rock'
-lakerock = 'You hop into the lake with a big splash and swim to the rock in the lake. ' \
-           'When you reach it, you drag yourself onto a smaller one nearby and catch your breath.\nYou get up and ' \
+       'You might be able to swim to the strange rock to the south. To the west you can go back to the meadow\'s edge'
+lakerock = 'You make your way to the top of the rock island. At the top you can see the area around you after ' \
+           'catching your breath.\nYou get up and ' \
            'look around the rock, feeling its smooth yet rough texture before spotting a hole. ' \
-           'Inside you can see something shining and see the bottom.'
+           'Inside you can see something shining and see the bottom.\n' \
+           'To the north you can swim back to shore.'
 lakecave = 'You look into the hole as you slide into it, ending up into a medium-sized cave with beautiful crystals ' \
            'lining the walls and glistening in the light.\n' \
            'In the center you see a bag of gold. Above you is the hole you came from.'
@@ -63,24 +65,33 @@ mansionentrance = 'Walking up the the mansion you see its intricate designs but 
 SOUTHFIELDS = Room('Fields of Exploration, South', southfields, 'MANSIONENTRANCE', 'EASTFIELDS', 'MEADOWENTRANCE',
                    'WESTFIELDS', '', '')
 WESTFIELDS = Room('Fields of Exploration, West', westfields, 'BEHINDHOUSE', '', 'SOUTHFIELDS', 'LUSHENTRANCE', '', '')
+E
 MANSIONENTRANCE = Room('Mansion Entrance', mansionentrance, 'COURTYARD', '', 'SOUTHFIELDS', '', '', '')
 
 
 current_node = QUIETMEADOW
-directions = ['NORTH', 'EAST', 'SOUTH', 'WEST', 'UP', 'DOWN']
+directions = ['north', 'east', 'south', 'west', 'up', 'down']
+short_directions = ['n', 'e', 's', 'w', 'u', 'd']
 
 while True:
     print(current_node.name)
-    print(current_node.description)
-    command = input('>_')
+    if not current_node.visited:
+        print(current_node.description)
+    command = input('>_').lower().strip()
     if command == 'quit':
         quit(0)
     elif command == 'cheeseburger':
         print('DON\'T TRUST THE DUCKS!!!')
     elif command == 'fly':
         print('You cannot fly seeing as you are not a bird!')
-    elif command.upper() in directions:
+    elif command == 'look':
+        print(current_node.description)
+    elif command in short_directions:
+        pos = short_directions.index(command)
+        command = directions[pos]
+    if command in directions:
         try:
+            current_node.visited = True
             current_node.move(command)
         except KeyError:
             print('You cannot go this way!')
