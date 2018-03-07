@@ -86,6 +86,7 @@ kitchen = ''
 livingroom = ''
 garden = ''
 trophyroom = ''
+duckroom = ''
 
 # MANSION F1 OBJECTS START HERE!!!
 COURTYARD = Room()
@@ -95,6 +96,7 @@ KITCHEN = Room()
 LIVINGROOM = Room()
 GARDEN = Room()
 TROPHYROOM = Room()
+DUCKROOM = Room()
 
 # MANSION F2 DESCRIPTIONS START HERE!!!
 
@@ -119,7 +121,10 @@ while True:
     if command == 'quit':
         quit(0)
     elif command == 'cheeseburger':
-        if current_node == TROPHYROOM
+        if current_node == TROPHYROOM:
+            print('The wall crumbles and breaks down. A doorway is revealed and there is a dark tunnel.\n'
+                  'In the tunnel you hear a strange squeak')
+            TROPHYROOM.north = 'DUCKROOM'
         print('DON\'T TRUST THE DUCKS!!!')
     elif command == 'fly':
         print('You cannot fly seeing as you are not a bird!')
