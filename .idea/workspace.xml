@@ -27,7 +27,7 @@
       <file leaf-file-name="Class(pythonstuff)Notes- Jorge Guerrero.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Class(pythonstuff)Notes- Jorge Guerrero.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
+            <state relative-caret-position="1224">
               <caret line="72" column="107" lean-forward="false" selection-start-line="72" selection-start-column="107" selection-end-line="72" selection-end-column="107" />
               <folding />
             </state>
@@ -38,7 +38,7 @@
         <entry file="file://$PROJECT_DIR$/DORK The legend of dork- Jorge Guerrero.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1326">
-              <caret line="78" column="13" lean-forward="true" selection-start-line="78" selection-start-column="13" selection-end-line="78" selection-end-column="13" />
+              <caret line="78" column="13" lean-forward="false" selection-start-line="78" selection-start-column="13" selection-end-line="78" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -47,8 +47,8 @@
       <file leaf-file-name="DORK The legend of dork Characters- Jorge Guerrero.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/DORK The legend of dork Characters- Jorge Guerrero.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+            <state relative-caret-position="306">
+              <caret line="18" column="14" lean-forward="false" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -109,6 +109,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -121,7 +122,6 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -145,7 +145,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.DORK The legend of dork- Jorge Guerrero">
+  <component name="RunManager" selected="Python.DORK The legend of dork Characters- Jorge Guerrero">
     <configuration name="Class(pythonstuff)Notes- Jorge Guerrero" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -240,8 +240,8 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.DORK The legend of dork- Jorge Guerrero" />
-        <item index="1" class="java.lang.String" itemvalue="Python.DORK The legend of dork Characters- Jorge Guerrero" />
+        <item index="0" class="java.lang.String" itemvalue="Python.DORK The legend of dork Characters- Jorge Guerrero" />
+        <item index="1" class="java.lang.String" itemvalue="Python.DORK The legend of dork- Jorge Guerrero" />
         <item index="2" class="java.lang.String" itemvalue="Python.Class(pythonstuff)Notes- Jorge Guerrero" />
         <item index="3" class="java.lang.String" itemvalue="Python.Notes" />
         <item index="4" class="java.lang.String" itemvalue="Python.Hangman - Jorge Guerrero" />
@@ -597,13 +597,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="112" column="22" lean-forward="false" selection-start-line="112" selection-start-column="22" selection-end-line="112" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Class(pythonstuff)Notes- Jorge Guerrero.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
+        <state relative-caret-position="1224">
           <caret line="72" column="107" lean-forward="false" selection-start-line="72" selection-start-column="107" selection-end-line="72" selection-end-column="107" />
           <folding />
         </state>
@@ -612,15 +611,15 @@
     <entry file="file://$PROJECT_DIR$/DORK The legend of dork- Jorge Guerrero.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1326">
-          <caret line="78" column="13" lean-forward="true" selection-start-line="78" selection-start-column="13" selection-end-line="78" selection-end-column="13" />
+          <caret line="78" column="13" lean-forward="false" selection-start-line="78" selection-start-column="13" selection-end-line="78" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DORK The legend of dork Characters- Jorge Guerrero.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+        <state relative-caret-position="306">
+          <caret line="18" column="14" lean-forward="false" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
           <folding />
         </state>
       </provider>
