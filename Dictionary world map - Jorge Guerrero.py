@@ -151,3 +151,17 @@ while True:
             print('You cannot go this way!')
     else:
         print('Command not recognized')
+
+
+# {
+#     'START' : {
+#     'Oh! Um... Hello There sir? W-Why did a giant portal appear and why did you come through it?',
+#         '1': 'W-well my name is Harvey, I\'m a blue recruit in this base',
+#         '2': 'This base is uh... Somewhere in La-La-Lamanthia? Lamantha? Lemanthia??',
+#             '3': 'Eeaarrtthh? Eaarth? what\'s an Eaarrrthhh? This is Sirca!',
+#                 '4': 'Sirca is a ring world, it is ruled by the house of Omega.',
+#             '5': 'Am I alone here? No of course not! There is Chedder and Hartman and Dad and Pas and Re... Um...',
+#                 '6': 'R-Rei...? Well he was our old CO but... he had to leave...',
+#         'END': 'Goodbye sir.'
+#     }
+# }
