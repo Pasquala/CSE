@@ -25,8 +25,8 @@ class Car(Vehicle):
         print('You turn the key and the engine starts')
 
 
-test_car = Car('Aluminum', 'Driver side', 140, 2, True)
-test_car.change_direction()
+# test_car = Car('Aluminum', 'Driver side', 140, 2, True)
+# test_car.change_direction()
 
 
 class KeylessCar(Car):
@@ -37,14 +37,23 @@ class KeylessCar(Car):
         print('You push the button and the car turns on')
 
 
-class Tesla(KeylessCar):
+class Tesla(Car):
     def __init__(self, material, seat, speed, passengers, windows):
         super(Tesla, self).__init__(material, seat, speed, passengers, windows)
+
+    def fly(self):
+        print('I BELIEVE I CAN FLYYYYYYYYYYYYYYYYYYYYYYY I BELIEVE I CAN TOUCH THE SKKKKYYYYYYYYYYYYYYY-wait nevermind '
+              'you\'re in space... maybe you shouldn\'t fly at %d mph' % self.max_speed)
+
+    def turn_on(self):
+        Car.turn_on(self)
 
     def crash(self):
         print('You violently jerk the steering wheel and crash into a pole. No one is hurt except for the car')
 
 
-test_car.turn_on()
-cool_car = KeylessCar('Aluminum', 'Driver side', 140, 2, True)
-cool_car.turn_on()
+# test_car.turn_on()
+# cool_car = KeylessCar('Aluminum', 'Driver side', 140, 2, True)
+# cool_car.turn_on()
+ultra_cool_car = Tesla('Carbon fiber', 'Driver side', 6.706e+8, 2, True)
+ultra_cool_car.fly()
