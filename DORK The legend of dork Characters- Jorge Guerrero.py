@@ -5,13 +5,21 @@ class Chupadore(object):
         self.dialogue = dialogue
         self.item = item
         self.affinity = affinity
+        if self.item != '':
+            self.holding = True
+        else:
+            self.holding = False
 
     def look(self):
-        print(self.description + '\nYou ask him about the paper in the paws, he looks awkwardly and holds out the paper'
-              + self.item)
+        if self.holding:
+            print(self.description + '\nYou ask the chupa about the item in their paws, '
+                                     'they look at you and hold it up. ' + self.item)
+        else:
+            print(self.description)
 
     def speak(self):
-        print('hi')
+        current_dia = self.dialogue['GREET']
+        print(current_dia['START'] + '\n' + current_dia['START_P'])
 
 
 haavee_des = 'You look at one of the aliens, a "Chupadore", and what you see is short fluffy fur colored a ' \
@@ -31,10 +39,11 @@ drawing = 'The drawing is a somewhat crude drawing of Harvey and another being t
 haavee = Chupadore('Harvey', haavee_des, haavee_dia, drawing, 'Blue')
 
 character = haavee
+
 while True:
-    command = input('>_').lower
+    command = input('>_').lower().strip()
     if command == 'quit':
-        quit(0)
+        exit(0)
     elif command == 'look':
         character.look()
     elif command == 'speak':

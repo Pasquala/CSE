@@ -89,7 +89,7 @@ trophyroom = ''
 duckroom = ''
 
 # MANSION F1 OBJECTS START HERE!!!
-COURTYARD = Room()
+COURTYARD = Room('Mansion Courtyard', courtyard, 'MAINROOM', '', 'MANSIONENTRANCE', '', '', '')
 MAINROOM = Room()
 DININGROOM = Room()
 KITCHEN = Room()
