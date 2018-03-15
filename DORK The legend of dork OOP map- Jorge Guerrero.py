@@ -86,7 +86,8 @@ kitchen = ''
 livingroom = ''
 garden = ''
 trophyroom = ''
-duckroom = ''
+duckroom = 'You go inside the room and through the tunnel you see... one duck... a very large duck at that, ' \
+           'good thing it is inside a cage.\n Why is there one giant rubber duck inside a cage?'
 
 # MANSION F1 OBJECTS START HERE!!!
 COURTYARD = Room('Mansion Courtyard', courtyard, 'MAINROOM', '', 'MANSIONENTRANCE', '', '', '')
