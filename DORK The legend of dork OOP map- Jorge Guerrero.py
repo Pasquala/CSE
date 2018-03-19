@@ -65,7 +65,9 @@ mansionentrance = 'Walking up the the mansion you see its intricate designs but 
                   'little farther north.\n' \
                   'To the west you see the dense forest and can hear some sound coming from that area albeit faint. ' \
                   'To the east you can see more of the desolate forest.'
-behindhouse = ''
+behindhouse = 'You stumble upon the back of the house. It looks relatively blank other than a few plants there to ' \
+              'decorate.\nThere are steep hills to the north, to the south there is obviously a giant mansion in ' \
+              'the way, to the east and west there are the east fields and west fields respectively.'
 # FIELDS OBJECTS START HERE!!!
 SOUTHFIELDS = Room('Fields of Exploration, South', southfields, 'MANSIONENTRANCE', 'EASTFIELDS', 'MEADOWENTRANCE',
                    'WESTFIELDS', '', '')
