@@ -1,6 +1,7 @@
 class Item(object):
-    def __init__(self, name, location):
+    def __init__(self, name, desc, location):
         self.name = name
+        self.desc = desc
         self.location = location
 
     def get_pick_upped(self):
@@ -11,10 +12,18 @@ class Item(object):
         elif len(player_inv) == 10:
             print('You have no space to carry the %s!' % self.name)
 
+    def get_dropped(self):
+        print('You set down the %s and give it a little pat.' % self.name)
+        player_inv.remove(self)
+        self.location = current_node
 
-class Keyitem(Item):
-    def __init__(self, name, location):
-        super(Keyitem, self).__init__(name, location)
+    def get_looked_at(self):
+        print(self.desc)
+
+
+class KeyItem(Item):
+    def __init__(self, name, desc, location):
+        super(KeyItem, self).__init__(name, desc, location)
 
     def get_pick_upped(self):
         print('You grab the %s.' % self.name)
@@ -23,8 +32,8 @@ class Keyitem(Item):
 
 
 class Food(Item):
-    def __init__(self, name, location, tasty):
-        super(Food, self).__init__(name, location)
+    def __init__(self, name, desc, location, tasty):
+        super(Food, self).__init__(name, desc, location)
         self.tasty = tasty
 
     def consume(self):
@@ -42,8 +51,8 @@ class Food(Item):
 
 
 class Drink(Food):
-    def __init__(self, name, location, tasty):
-        super(Drink, self).__init__(name, location, tasty)
+    def __init__(self, name, desc, location, tasty):
+        super(Drink, self).__init__(name, desc, location, tasty)
 
     def consume(self):
         if self in player_inv:
@@ -59,12 +68,37 @@ class Drink(Food):
                 print('You cannot drink what you don\'t have!')
 
 
-class Toaster(Keyitem):
-    def __init__(self):
+class Toaster(KeyItem):
+    def __init__(self, name, desc, location):
+        super(Toaster, self).__init__(name, desc, location)
+
+    def make_toast(self):
+        if current_node == 'KITCHEN':
+            print('You plug in the %s and you make some toast! It comes out and your look at the toast...\n'
+                  'You see there are messages on the toast.\nYou try to make it out and it looks like a conversation '
+                  'between two men and one of them is asking about a toaster' % self.name)
+            toast = Food('Toast', 'It be some good toast', '', True)
+            if len(player_inv) > 10:
+                toast.get_pick_upped()
+            else:
+                print('Ack! You don\'t have any space to put the toast in your pocket... so you eat it...')
+                toast.consume()
+        elif current_node != 'KITCHEN':
+            print('You look around but you don\nt see anywhere to make toast... only if there was a kitchen somewhere.')
 
 
-jeffjeff = Item('Jeff Jeff', 'JEFFJEFFLAAANNNNDDDD')
-spaghet = Food('Spaghet', 'SOMEWHERERRERERER OVAH DA RAINBAUW', True)
+class ShrinkRay(KeyItem):
+    def __init__(self, name, desc, location):
+        super(ShrinkRay, self).__init__(name, desc, location)
+
+    def shrink_stuff(self):
+        print('you look over the %s and realize it looks like it functions like a gun. you point at a nearby piece of '
+              'junk and fire\nPOW!\nThe piece of junk shrinks? Oh welp now it\'s too small to find...' % self.name)
+
+
+current_node = 'RAWK'
+jeffjeff = Item('Jeff Jeff', 'It Jeff Jeff', 'JEFFJEFFLAAANNNNDDDD')
+spaghet = Food('Spaghet', 'Somebody\'s spaghet', 'SOMEWHERERRERERER OVAH DA RAINBAUW', True)
 player_inv = [spaghet, jeffjeff]
 key_inv = []
 for item in player_inv:
