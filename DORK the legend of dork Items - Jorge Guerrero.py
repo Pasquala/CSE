@@ -87,6 +87,18 @@ class Toaster(KeyItem):
             print('You look around but you don\nt see anywhere to make toast... only if there was a kitchen somewhere.')
 
 
+class Wearables(KeyItem):
+    def __init__(self, name, desc, location, fab):
+        super(Wearables, self).__init__(name, desc, location)
+        self.fab = fab
+
+    def wear(self):
+        if self.fab:
+            print('You put on the %s... OOO GUURRLLL U BE LUUKIN FAB THO' % self.name)
+        elif not self.fab:
+            print('You put on the %s... Eh... Could be better')
+
+
 class ShrinkRay(KeyItem):
     def __init__(self, name, desc, location):
         super(ShrinkRay, self).__init__(name, desc, location)
@@ -94,6 +106,14 @@ class ShrinkRay(KeyItem):
     def shrink_stuff(self):
         print('you look over the %s and realize it looks like it functions like a gun. you point at a nearby piece of '
               'junk and fire\nPOW!\nThe piece of junk shrinks? Oh welp now it\'s too small to find...' % self.name)
+
+
+class Figurine(KeyItem):
+    def __init__(self, name, desc, location):
+        super(Figurine, self).__init__(name, desc, location)
+
+    def get_pick_upped(self):
+        print('')
 
 
 current_node = 'RAWK'
@@ -106,3 +126,5 @@ for item in player_inv:
 spaghet.consume()
 for item in player_inv:
     print(item.name)
+high_heels = Wearables('Lucky High Heels', 'You are wearing these lucky high heels... you feel fabulous', 'YES', True)
+high_heels.wear()
