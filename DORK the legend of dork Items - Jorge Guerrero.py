@@ -113,13 +113,16 @@ class Figurine(KeyItem):
         super(Figurine, self).__init__(name, desc, location)
 
     def get_pick_upped(self):
-        print('')
+        print('You see the glint of a figurine, you pick it up and look at it. It\'s a limited edition %s Figurine!' %
+              self.name + '\n' + '%s' % self.desc)
 
 
 current_node = 'RAWK'
 jeffjeff = Item('Jeff Jeff', 'It Jeff Jeff', 'JEFFJEFFLAAANNNNDDDD')
 spaghet = Food('Spaghet', 'Somebody\'s spaghet', 'SOMEWHERERRERERER OVAH DA RAINBAUW', True)
 player_inv = [spaghet, jeffjeff]
+figurine_list = ['mr wiebe', 'wiebe "the duck" wybe', 'Giant rubber duck', 'treeguard', 'Weibe 2.0', 'Mister Sir Man',
+                 'toaster', 'Troll eating smashed egg', 'Messed up bear', 'Great pyrenees', 'Mr Wybe']
 key_inv = []
 for item in player_inv:
     print(item.name)
