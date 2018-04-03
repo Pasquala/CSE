@@ -114,7 +114,7 @@ class Figurine(KeyItem):
 
     def get_pick_upped(self):
         print('You see the glint of a figurine, you pick it up and look at it. It\'s a limited edition %s Figurine!' %
-              self.name + '\n' + '%s' % self.desc)
+              self.name + '\n' + self.desc)
 
 
 current_node = 'RAWK'

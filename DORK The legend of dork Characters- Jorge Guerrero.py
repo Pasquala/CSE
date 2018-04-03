@@ -22,10 +22,10 @@ class Chupadore(object):
         print(current_dia['START'] + '\n' + current_dia['START_P'])
 
 
-haavee_des = 'You look at one of the aliens, a "Chupadore", and what you see is short fluffy fur colored a ' \
+harvey_des = 'You look at one of the aliens, a "Chupadore", and what you see is short fluffy fur colored a ' \
              'light teal. He has some blue recruit armor and he fiddles with a paper in his paws.\n' \
          'He looks very young compared to everyone else, about 12-13 human years.'
-haavee_dia = {
+harvey_dia = {
     'GREET': {
         'START': 'Oh! Um... Hello There sir? W-Why did a giant portal appear and why did you come through it?',
         'START_P':'Hello, I was messing about in and around a canyon next to an old mansion and I got dragged here',
@@ -36,9 +36,9 @@ haavee_dia = {
 drawing = 'The drawing is a somewhat crude drawing of Harvey and another being that looks drastically different.\n' \
           'On the back there is a heart and in the heart it says \'For Harv!\''
 
-haavee = Chupadore('Harvey', haavee_des, haavee_dia, drawing, 'Blue')
+harvey = Chupadore('Harvey', harvey_des, harvey_dia, drawing, 'Blue')
 
-character = haavee
+character = harvey
 
 while True:
     command = input('>_').lower().strip()
