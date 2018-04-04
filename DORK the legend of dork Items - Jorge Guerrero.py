@@ -121,8 +121,9 @@ current_node = 'RAWK'
 jeffjeff = Item('Jeff Jeff', 'It Jeff Jeff', 'JEFFJEFFLAAANNNNDDDD')
 spaghet = Food('Spaghet', 'Somebody\'s spaghet', 'SOMEWHERERRERERER OVAH DA RAINBAUW', True)
 player_inv = [spaghet, jeffjeff]
-figurine_list = ['mr wiebe', 'wiebe "the duck" wybe', 'Giant rubber duck', 'treeguard', 'Weibe 2.0', 'Mister Sir Man',
-                 'toaster', 'Troll eating smashed egg', 'Messed up bear', 'Great pyrenees', 'Mr Wybe']
+figurine_list = ['Mr. Wiebe', 'Wiebe "the duck" Wybe', 'Cheese God (not other friend???)', 'Gandwiebe the white',
+                 'Mister Sir Man', 'Toaster', 'Troll eating smashed egg', 'Messed up bear', 'Great pyrenees', 'Mr. Wybe'
+                 'Gas Station Wiebe', 'Teen Wiebe', 'One Duck', 'Guy playing Roblox', 'Problems (not friend???)']
 key_inv = []
 for item in player_inv:
     print(item.name)

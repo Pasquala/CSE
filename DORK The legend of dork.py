@@ -72,7 +72,7 @@ class Food(Item):
                       % (self.name,))
                 player_inv.remove(self)
             else:
-                print('You cannot eat what you dont have!')
+                print('You cannot eat what you don\'t have!')
 
 
 class Drink(Food):
@@ -124,6 +124,17 @@ class Wearables(KeyItem):
             print('You put on the %s... Eh... Could be better')
 
 
+class Map(KeyItem):
+    def __init__(self, name, desc, location):
+        super(Map, self).__init__(name, desc, location)
+
+    def fast_travel(self):
+        print('You open the %s and look at it. The map is filled in with the rooms you have been in before' % self.name)
+        print('Where would you like to travel?')
+        teleport = input('>_')
+
+
+
 class ShrinkRay(KeyItem):
     def __init__(self, name, desc, location):
         super(ShrinkRay, self).__init__(name, desc, location)
@@ -145,7 +156,7 @@ class Figurine(KeyItem):
 # CHARACTER CLASSES
 
 
-class Chupadore(object):
+class Character(object):
     def __init__(self, name, description, dialogue, item, affinity):
         self.name = name
         self.description = description
@@ -159,8 +170,8 @@ class Chupadore(object):
 
     def look(self):
         if self.holding:
-            print(self.description + '\nYou ask the chupa about the item in their paws, '
-                                     'they look at you and hold it up. ' + self.item)
+            print(self.description + '\nYou ask the person about the item they have, '
+                                     'they hold it up in response. ' + self.item)
         else:
             print(self.description)
 
@@ -253,11 +264,11 @@ duckroom = 'You go inside the room and through the tunnel you see... one duck...
 
 # MANSION F1 OBJECTS START HERE
 COURTYARD = Room('Mansion Courtyard', courtyard, 'MAINROOM', '', 'MANSIONENTRANCE', '', '', '')
-MAINROOM = Room()
-DININGROOM = Room()
-KITCHEN = Room()
-LIVINGROOM = Room()
-GARDEN = Room()
+MAINROOM = Room('Great Atrium', mainroom, '', 'DININGROOM', 'COURTYARD', 'LIVINGROOM', 'F2HALLWAY', '')
+DININGROOM = Room('Dining Room', diningroom, '', '', 'KITCHEN', 'MAINROOM', '', '')
+KITCHEN = Room('Kitchen', kitchen, 'DININGROOM', '', '', '', '', '')
+LIVINGROOM = Room('Common Room', livingroom, 'TROPHYROOM', 'MAINROOM', 'GARDEN', '', '', '')
+GARDEN = Room('Pretty Garden', garden, 'LIVINGROOM', '', '', '', '', '')
 TROPHYROOM = Room()
 DUCKROOM = Room()
 
