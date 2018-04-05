@@ -131,6 +131,26 @@ class Map(KeyItem):
     def fast_travel(self):
         print('You open the %s and look at it. The map is filled in with the rooms you have been in before' % self.name)
         print('Where would you like to travel?')
+        room_dictionary = {
+            'Quiet Meadow Valley': QUIETMEADOW,
+            'Meadow Entrance': MEADOWENTRANCE,
+            'Mirror Lake': LAKE,
+            'Strange Rock Island': LAKEROCK,
+            'Crystal Cave': LAKECAVE,
+            'Fields of Exploration, South': SOUTHFIELDS,
+            'Fields of Exploration, West': WESTFIELDS,
+            'Fields of Exploration, East': EASTFIELDS,
+            'Mansion Entrance': MANSIONENTRANCE,
+            'Behind The House': BEHINDHOUSE,
+            'Mansion Courtyard': COURTYARD,
+            'Great Atrium': MAINROOM,
+            'Dining Room': DININGROOM,
+            'Kitchen': KITCHEN,
+            'Common Room': LIVINGROOM,
+            'Pretty Garden': GARDEN,
+            'Trophy Room': TROPHYROOM,
+            'Duck Room': DUCKROOM
+        }
         teleport = input('>_')
 
 
@@ -211,7 +231,7 @@ lakecave = 'You look into the hole as you slide into it, ending up into a medium
 # MEADOW AREA OBJECTS START HERE
 QUIETMEADOW = Room('Quiet Meadow Valley', quietmeadow, 'MEADOWENTRANCE', '', '', '', '', '')
 MEADOWENTRANCE = Room('Meadow Entrance', meadowentrance, 'SOUTHFIELDS', 'LAKE', 'QUIETMEADOW', '', '', '')
-LAKE = Room('Mirror lake', lake, '', '', 'LAKEROCK', 'MEADOWENTRANCE', '', '')
+LAKE = Room('Mirror Lake', lake, '', '', 'LAKEROCK', 'MEADOWENTRANCE', '', '')
 LAKEROCK = Room('Strange Rock Island', lakerock, 'LAKE', '', '', '', '', 'LAKECAVE')
 LAKECAVE = Room('Crystal Cave', lakecave, '', '', '', '', 'LAKEROCK', '')
 
@@ -269,8 +289,8 @@ DININGROOM = Room('Dining Room', diningroom, '', '', 'KITCHEN', 'MAINROOM', '', 
 KITCHEN = Room('Kitchen', kitchen, 'DININGROOM', '', '', '', '', '')
 LIVINGROOM = Room('Common Room', livingroom, 'TROPHYROOM', 'MAINROOM', 'GARDEN', '', '', '')
 GARDEN = Room('Pretty Garden', garden, 'LIVINGROOM', '', '', '', '', '')
-TROPHYROOM = Room()
-DUCKROOM = Room()
+TROPHYROOM = Room('Trophy Room', trophyroom, '', '', 'LIVINGROOM', '', '', '')
+DUCKROOM = Room('Duck Room', duckroom, '', '', 'TROPHYROOM', '', '', '')
 
 # MANSION F2 DESCRIPTIONS START HERE!!!
 
