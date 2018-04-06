@@ -152,7 +152,11 @@ class Map(KeyItem):
             'Duck Room': DUCKROOM
         }
         teleport = input('>_')
-
+        if teleport in room_dictionary:
+            print('You close the map and travel off to the %s!' % teleport)
+            current_node = room_dictionary[teleport]
+        else:
+            print('You look over the map... it seems %s is not there.' % teleport)
 
 
 class ShrinkRay(KeyItem):
@@ -272,7 +276,8 @@ BEHINDHOUSE = Room('Behind The House', behindhouse, '', 'EASTFIELDS', '', 'WESTF
 # MANSION AREA STARTS HERE!!!
 
 # MANSION F1 DESCRIPTIONS START HERE
-courtyard = 'Looking around, the courtyard is somewhat empty, '
+courtyard = 'Looking around, the courtyard is somewhat empty, there are elegant decorations all around the courtyard.' \
+            '\n'
 mainroom = ''
 diningroom = ''
 kitchen = ''
@@ -299,3 +304,49 @@ DUCKROOM = Room('Duck Room', duckroom, '', '', 'TROPHYROOM', '', '', '')
 # MANSION B1 DESCRIPTIONS START HERE!!!
 
 # MANSION B1 OBJECTS START HERE!!!
+
+
+current_node = QUIETMEADOW
+directions = ['north', 'east', 'south', 'west', 'up', 'down']
+short_directions = ['n', 'e', 's', 'w', 'u', 'd']
+
+potato = Food('Delicious potato', 'A very yummy potato', '', True)
+
+player_inv = [potato]
+key_inv = []
+figurine_list = ['Mr. Wiebe', 'Wiebe "the duck" Wybe', 'Cheese God (not other friend???)', 'Gandwiebe the white',
+                 'Mister Sir Man', 'Toaster', 'Troll eating smashed egg', 'Messed up bear', 'Great pyrenees', 'Mr. Wybe'
+                 'Gas Station Wiebe', 'Teen Wiebe', 'One Duck', 'Guy playing Roblox', 'Problems (not friend???)']
+
+
+while True:
+    print(current_node.name)
+    if not current_node.visited:
+        print(current_node.description)
+    command = input('>_').lower().strip()
+    if command == 'quit':
+        quit(0)
+    elif command == 'cheeseburger':
+        if current_node == TROPHYROOM:
+            print('The wall crumbles and breaks down. A doorway is revealed and there is a dark tunnel.\n'
+                  'In the tunnel you hear a strange squeak')
+            TROPHYROOM.north = 'DUCKROOM'
+        print('DON\'T TRUST THE DUCKS!!!')
+    elif command == 'fly':
+        print('You cannot fly seeing as you are not a bird!')
+    elif command == 'look':
+        print(current_node.description)
+    elif command == 'inventory' or command == 'inv' or command == 'i':
+        for item in player_inv:
+            print(item.name)
+    elif command in short_directions:
+        pos = short_directions.index(command)
+        command = directions[pos]
+    if command in directions:
+        try:
+            current_node.visited = True
+            current_node.move(command)
+        except KeyError:
+            print('You cannot go this way!')
+    else:
+        print('Command not recognized')
