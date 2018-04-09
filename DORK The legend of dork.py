@@ -276,13 +276,18 @@ BEHINDHOUSE = Room('Behind The House', behindhouse, '', 'EASTFIELDS', '', 'WESTF
 # MANSION AREA STARTS HERE!!!
 
 # MANSION F1 DESCRIPTIONS START HERE
-courtyard = 'Looking around, the courtyard is somewhat empty, there are elegant decorations all around the courtyard.' \
-            '\n'
-mainroom = ''
+courtyard = 'You step into the courtyard and looking around, the courtyard is somewhat empty.' \
+            'There are elegant decorations all around the courtyard.\nThere are a few antique benches, chairs, ' \
+            'tables, and other decorations to make the courtyard seem a bit more cozy.\nIn the center there is an ' \
+            'open area perfect to stand in and be engulfed in a warm blanket of sunlight!'
+mainroom = 'Stepping inside the actual mansion, the air is cool and still, with very little sound... it brings you ' \
+           'peace and tranquility'
 diningroom = ''
 kitchen = ''
 livingroom = ''
-garden = ''
+garden = 'You step into a garden just outside of the mansion, but fenced into its own secluded area.]\n The air is ' \
+         'filled with the sweet smell of nectar and despite the apparent age of the garden, the flowers are thriving ' \
+         'with splashes of magnificent, vibrant, glorious colors.\nTo the north is the door back into the common room'
 trophyroom = ''
 duckroom = 'You go inside the room and through the tunnel you see... one duck... a very large duck at that. ' \
            '\nGreat, James is at it again. Why does he always do this. Oh great, there\'s the toaster.'
@@ -296,14 +301,6 @@ LIVINGROOM = Room('Common Room', livingroom, 'TROPHYROOM', 'MAINROOM', 'GARDEN',
 GARDEN = Room('Pretty Garden', garden, 'LIVINGROOM', '', '', '', '', '')
 TROPHYROOM = Room('Trophy Room', trophyroom, '', '', 'LIVINGROOM', '', '', '')
 DUCKROOM = Room('Duck Room', duckroom, '', '', 'TROPHYROOM', '', '', '')
-
-# MANSION F2 DESCRIPTIONS START HERE!!!
-
-# MANSION F2 OBJECTS START HERE!!!
-
-# MANSION B1 DESCRIPTIONS START HERE!!!
-
-# MANSION B1 OBJECTS START HERE!!!
 
 
 current_node = QUIETMEADOW
