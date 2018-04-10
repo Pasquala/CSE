@@ -280,8 +280,8 @@ courtyard = 'You step into the courtyard and looking around, the courtyard is so
             'There are elegant decorations all around the courtyard.\nThere are a few antique benches, chairs, ' \
             'tables, and other decorations to make the courtyard seem a bit more cozy.\nIn the center there is an ' \
             'open area perfect to stand in and be engulfed in a warm blanket of sunlight!'
-mainroom = 'Stepping inside the actual mansion, the air is cool and still, with very little sound... it brings you ' \
-           'peace and tranquility'
+mainroom = 'Stepping inside the actual mansion, the air is cool and still, with very little sound... It brings you ' \
+           'peace and tranquility, you feel relaxed.\n'
 diningroom = ''
 kitchen = ''
 livingroom = ''
@@ -333,13 +333,19 @@ while True:
         print('You cannot fly seeing as you are not a bird!')
     elif command == 'look':
         print(current_node.description)
+    elif command == 'wiebe wybe':
+        for wiebe in range(0, 999):
+            print("Mr. Wiebe")
+        print('The gates of Wiebe has been opened... within the walls of the mansion... within the room of rewards... '
+              'a boon lies in wait')
+        maple_syrup = KeyItem('Maple Syrup', 'Very good maple syrup! Super sweet', 'TROPHYROOM')
     elif command == 'inventory' or command == 'inv' or command == 'i':
         for item in player_inv:
             print(item.name)
     elif command in short_directions:
         pos = short_directions.index(command)
         command = directions[pos]
-    if command in directions:
+    elif command in directions:
         try:
             current_node.visited = True
             current_node.move(command)
