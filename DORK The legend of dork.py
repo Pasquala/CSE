@@ -129,8 +129,9 @@ class Map(KeyItem):
         super(Map, self).__init__(name, desc, location)
 
     def fast_travel(self):
-        print('You open the %s and look at it. The map is filled in with the rooms you have been in before' % self.name)
-        print('Where would you like to travel?')
+        print('You open the %s and look at it. The map is filled in with the rooms you have been in before and rooms'
+              'you know the name of' % self.name)
+        print('You hear a voice in your head.\nWhere would you like to travel?')
         room_dictionary = {
             'Quiet Meadow Valley': QUIETMEADOW,
             'Meadow Entrance': MEADOWENTRANCE,
@@ -153,7 +154,9 @@ class Map(KeyItem):
         }
         teleport = input('>_')
         if teleport in room_dictionary:
-            print('You close the map and travel off to the %s!' % teleport)
+            print('You close the map and shiny transparent golden wings wrap around you and teleport you to %s!'
+                  % teleport)
+            global current_node
             current_node = room_dictionary[teleport]
         else:
             print('You look over the map... it seems %s is not there.' % teleport)
@@ -281,7 +284,8 @@ courtyard = 'You step into the courtyard and looking around, the courtyard is so
             'tables, and other decorations to make the courtyard seem a bit more cozy.\nIn the center there is an ' \
             'open area perfect to stand in and be engulfed in a warm blanket of sunlight!'
 mainroom = 'Stepping inside the actual mansion, the air is cool and still, with very little sound... It brings you ' \
-           'peace and tranquility, you feel relaxed.\n'
+           'peace and tranquility, you feel relaxed.\nThe room is furnished with some beautiful antique furniture ' \
+           'and the floor is covered in an elegant carpet with intricate designs near the edges.'
 diningroom = ''
 kitchen = ''
 livingroom = ''
@@ -307,9 +311,13 @@ current_node = QUIETMEADOW
 directions = ['north', 'east', 'south', 'west', 'up', 'down']
 short_directions = ['n', 'e', 's', 'w', 'u', 'd']
 
+magic_map = Map('Old Map', 'A very strange map. The more you walk, the more it fills itself in. on the bottom it reads '
+                           '"Speak the word of movement. Focus your mind and say the word teleport. '
+                           'The map will heed your call and take you with gilded wings"', '')
+
 potato = Food('Delicious potato', 'A very yummy potato', '', True)
 
-player_inv = [potato]
+player_inv = [potato, magic_map]
 key_inv = []
 figurine_list = ['Mr. Wiebe', 'Wiebe "the duck" Wybe', 'Cheese God (not other friend???)', 'Gandwiebe the white',
                  'Mister Sir Man', 'Toaster', 'Troll eating smashed egg', 'Messed up bear', 'Great pyrenees', 'Mr. Wybe'
@@ -317,39 +325,60 @@ figurine_list = ['Mr. Wiebe', 'Wiebe "the duck" Wybe', 'Cheese God (not other fr
 
 
 while True:
+
+    # Room desc stuffs
+
+    command = input('>_').lower().strip()
     print(current_node.name)
     if not current_node.visited:
         print(current_node.description)
-    command = input('>_').lower().strip()
     if command == 'quit':
         quit(0)
+
+    # Ducks
+
     elif command == 'cheeseburger':
         if current_node == TROPHYROOM:
             print('The wall crumbles and breaks down. A doorway is revealed and there is a dark tunnel.\n'
                   'In the tunnel you hear a strange squeak')
             TROPHYROOM.north = 'DUCKROOM'
         print('DON\'T TRUST THE DUCKS!!!')
+
+    # Fun stuffs
+
     elif command == 'fly':
         print('You cannot fly seeing as you are not a bird!')
     elif command == 'look':
         print(current_node.description)
+
+    # Gates of Wiebe
+
     elif command == 'wiebe wybe':
-        for wiebe in range(0, 999):
+        for wiebe in range(0, 99999):
             print("Mr. Wiebe")
         print('The gates of Wiebe has been opened... within the walls of the mansion... within the room of rewards... '
               'a boon lies in wait')
         maple_syrup = KeyItem('Maple Syrup', 'Very good maple syrup! Super sweet', 'TROPHYROOM')
+
+    # Needed stuffs
+
+    elif command == 'teleport' or 'warp' or 'tp' or 'travel':
+        magic_map.fast_travel()
+
     elif command == 'inventory' or command == 'inv' or command == 'i':
         for item in player_inv:
             print(item.name)
+
     elif command in short_directions:
         pos = short_directions.index(command)
         command = directions[pos]
+
     elif command in directions:
         try:
             current_node.visited = True
             current_node.move(command)
         except KeyError:
             print('You cannot go this way!')
+
     else:
         print('Command not recognized')
