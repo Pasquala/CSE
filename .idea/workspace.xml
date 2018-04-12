@@ -27,8 +27,8 @@
       <file leaf-file-name="DORK The legend of dork.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/DORK The legend of dork.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="126" column="0" lean-forward="true" selection-start-line="126" selection-start-column="0" selection-end-line="126" selection-end-column="0" />
+            <state relative-caret-position="238">
+              <caret line="335" column="4" lean-forward="false" selection-start-line="335" selection-start-column="4" selection-end-line="335" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -37,7 +37,7 @@
       <file leaf-file-name="DORK The legend of dork OOP map- Jorge Guerrero.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DORK The legend of dork OOP map- Jorge Guerrero.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
+            <state relative-caret-position="1904">
               <caret line="112" column="0" lean-forward="false" selection-start-line="112" selection-start-column="0" selection-end-line="112" selection-end-column="0" />
               <folding />
             </state>
@@ -47,7 +47,7 @@
       <file leaf-file-name="DORK the legend of dork Items - Jorge Guerrero.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DORK the legend of dork Items - Jorge Guerrero.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
+            <state relative-caret-position="2142">
               <caret line="126" column="12" lean-forward="false" selection-start-line="126" selection-start-column="12" selection-end-line="126" selection-end-column="12" />
               <folding />
             </state>
@@ -90,6 +90,7 @@
         <option value="$PROJECT_DIR$/DORK The legend of dork Characters- Jorge Guerrero.py" />
         <option value="$PROJECT_DIR$/DORK the legend of dork Items - Jorge Guerrero.py" />
         <option value="$PROJECT_DIR$/DORK The legend of dork OOP map- Jorge Guerrero.py" />
+        <option value="$PROJECT_DIR$/Dork The Legend of dork Trial.py" />
         <option value="$PROJECT_DIR$/DORK The legend of dork.py" />
       </list>
     </option>
@@ -151,7 +152,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.DORK The legend of dork">
+  <component name="RunManager" selected="Python.Dork The Legend of dork Trial">
     <configuration name="DORK The legend of dork Characters- Jorge Guerrero" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -220,7 +221,7 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <configuration name="Programmer" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="Dork The Legend of dork Trial" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -232,25 +233,25 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="CSE" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Programmer.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Dork The Legend of dork Trial.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python.DORK The legend of dork Characters- Jorge Guerrero" />
-      <item index="1" class="java.lang.String" itemvalue="Python.Programmer" />
-      <item index="2" class="java.lang.String" itemvalue="Python.DORK the legend of dork Items - Jorge Guerrero" />
-      <item index="3" class="java.lang.String" itemvalue="Python.DORK The legend of dork OOP map- Jorge Guerrero" />
-      <item index="4" class="java.lang.String" itemvalue="Python.DORK The legend of dork" />
+      <item index="1" class="java.lang.String" itemvalue="Python.DORK the legend of dork Items - Jorge Guerrero" />
+      <item index="2" class="java.lang.String" itemvalue="Python.DORK The legend of dork OOP map- Jorge Guerrero" />
+      <item index="3" class="java.lang.String" itemvalue="Python.DORK The legend of dork" />
+      <item index="4" class="java.lang.String" itemvalue="Python.Dork The Legend of dork Trial" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.DORK The legend of dork" />
-        <item index="1" class="java.lang.String" itemvalue="Python.DORK the legend of dork Items - Jorge Guerrero" />
-        <item index="2" class="java.lang.String" itemvalue="Python.DORK The legend of dork OOP map- Jorge Guerrero" />
-        <item index="3" class="java.lang.String" itemvalue="Python.DORK The legend of dork Characters- Jorge Guerrero" />
-        <item index="4" class="java.lang.String" itemvalue="Python.Programmer" />
+        <item index="0" class="java.lang.String" itemvalue="Python.Dork The Legend of dork Trial" />
+        <item index="1" class="java.lang.String" itemvalue="Python.DORK The legend of dork" />
+        <item index="2" class="java.lang.String" itemvalue="Python.DORK the legend of dork Items - Jorge Guerrero" />
+        <item index="3" class="java.lang.String" itemvalue="Python.DORK The legend of dork OOP map- Jorge Guerrero" />
+        <item index="4" class="java.lang.String" itemvalue="Python.DORK The legend of dork Characters- Jorge Guerrero" />
       </list>
     </recent_temporary>
   </component>
@@ -307,7 +308,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Lucky 7's.py" />
     <entry file="file://$PROJECT_DIR$/Notes.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2533">
@@ -596,7 +596,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/DORK The legend of dork OOP map- Jorge Guerrero.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state relative-caret-position="1904">
           <caret line="112" column="0" lean-forward="false" selection-start-line="112" selection-start-column="0" selection-end-line="112" selection-end-column="0" />
           <folding />
         </state>
@@ -604,16 +604,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/DORK the legend of dork Items - Jorge Guerrero.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state relative-caret-position="2142">
           <caret line="126" column="12" lean-forward="false" selection-start-line="126" selection-start-column="12" selection-end-line="126" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dork The Legend of dork Trial.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="333" column="4" lean-forward="false" selection-start-line="333" selection-start-column="4" selection-end-line="333" selection-end-column="4" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DORK The legend of dork.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="126" column="0" lean-forward="true" selection-start-line="126" selection-start-column="0" selection-end-line="126" selection-end-column="0" />
+        <state relative-caret-position="238">
+          <caret line="335" column="4" lean-forward="false" selection-start-line="335" selection-start-column="4" selection-end-line="335" selection-end-column="4" />
           <folding />
         </state>
       </provider>

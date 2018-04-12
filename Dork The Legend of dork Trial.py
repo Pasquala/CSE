@@ -333,7 +333,6 @@ while True:
     if not current_node.visited:
         print(current_node.description)
     command = input('>_').lower().strip()
-    
     if command == 'quit':
         quit(0)
 
@@ -372,10 +371,6 @@ while True:
     elif command == 'inventory' or command == 'inv' or command == 'i':
         for item in player_inv:
             print(item.name)
-
-    elif command == 'pick up':
-        item = input('What? ')
-        # if item in Item_Dictionary
 
     elif command in short_directions:
         pos = short_directions.index(command)
