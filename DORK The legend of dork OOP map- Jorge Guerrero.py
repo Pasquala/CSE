@@ -17,7 +17,7 @@ class Room(object):
 
 # MEADOW AREA STARTS HERE!!!
 
-# MEADOW AREA DESCRIPTIONS START HERE!!!
+# MEADOW AREA DESCRIPTIONS
 quietmeadow = 'A beautiful serene meadow with a large rock in the middle. ' \
                    'There is a sign in front of the rock stating "Today is the day! Go explore!"' \
                    ' \nNorth of the rock you see the meadow continues,' \
@@ -38,17 +38,17 @@ lakecave = 'You look into the hole as you slide into it, ending up into a medium
            'lining the walls and glistening in the light.\n' \
            'In the center you see a bag of gold. Above you is the hole you came from.'
 
-# MEADOW AREA OBJECTS START HERE!!!
+# MEADOW AREA OBJECTS START HERE
 QUIETMEADOW = Room('Quiet Meadow Valley', quietmeadow, 'MEADOWENTRANCE', '', '', '', '', '')
 MEADOWENTRANCE = Room('Meadow Entrance', meadowentrance, 'SOUTHFIELDS', 'LAKE', 'QUIETMEADOW', '', '', '')
-LAKE = Room('Mirror lake', lake, '', '', 'LAKEROCK', 'MEADOWENTRANCE', '', '')
+LAKE = Room('Mirror Lake', lake, '', '', 'LAKEROCK', 'MEADOWENTRANCE', '', '')
 LAKEROCK = Room('Strange Rock Island', lakerock, 'LAKE', '', '', '', '', 'LAKECAVE')
 LAKECAVE = Room('Crystal Cave', lakecave, '', '', '', '', 'LAKEROCK', '')
 
 
 # FIELDS AREA STARTS HERE!!!
 
-# FIELDS DESCRIPTIONS START HERE!!!
+# FIELDS DESCRIPTIONS START HERE
 southfields = 'You stumbled into a massive field! all around are little shiny objects such as rocks, ' \
               'you look north to see a mansion and more field to the west, leading into a dense forest.\n' \
               'To the east you can see the field leading into another forest but, this forest seems dead and desolate'
@@ -68,7 +68,8 @@ mansionentrance = 'Walking up the the mansion you see its intricate designs but 
 behindhouse = 'You stumble upon the back of the house. It looks relatively blank other than a few plants there to ' \
               'decorate.\nThere are steep hills to the north, to the south there is obviously a giant mansion in ' \
               'the way, to the east and west there are the east fields and west fields respectively.'
-# FIELDS OBJECTS START HERE!!!
+
+# FIELDS OBJECTS START HERE
 SOUTHFIELDS = Room('Fields of Exploration, South', southfields, 'MANSIONENTRANCE', 'EASTFIELDS', 'MEADOWENTRANCE',
                    'WESTFIELDS', '', '')
 WESTFIELDS = Room('Fields of Exploration, West', westfields, 'BEHINDHOUSE', '', 'SOUTHFIELDS', 'LUSHENTRANCE', '', '')
@@ -80,34 +81,36 @@ BEHINDHOUSE = Room('Behind The House', behindhouse, '', 'EASTFIELDS', '', 'WESTF
 
 # MANSION AREA STARTS HERE!!!
 
-# MANSION F1 DESCRIPTIONS START HERE!!!
-courtyard = ''
-mainroom = ''
+# MANSION F1 DESCRIPTIONS START HERE
+courtyard = 'You step into the courtyard and looking around, the courtyard is somewhat empty.' \
+            'There are elegant decorations all around the courtyard.\nThere are a few antique benches, chairs, ' \
+            'tables, and other decorations to make the courtyard seem a bit more cozy.\nIn the center there is an ' \
+            'open area perfect to stand in and be engulfed in a warm blanket of sunlight!'
+mainroom = 'Stepping inside the actual mansion, the air is cool and still, with very little sound... It brings you ' \
+           'peace and tranquility, you feel relaxed.\nThe room is furnished with some beautiful antique furniture ' \
+           'and the floor is covered in an elegant carpet with intricate designs near the edges.'
 diningroom = ''
 kitchen = ''
 livingroom = ''
-garden = ''
-trophyroom = ''
+garden = 'You step into a garden just outside of the mansion, but fenced into its own secluded area.\n The air is ' \
+         'filled with the sweet smell of nectar and despite the apparent age of the garden, the flowers are thriving ' \
+         'with splashes of magnificent, vibrant, glorious colors.\nTo the north is the door back into the common room.'
+trophyroom = 'You step the trophy room. The west wall has a glass case with dust except for 15 small circles that are' \
+             'clear of any dust.\nOn the glass case there is a box that reads "Speak the name of the one lost to the ' \
+             'ducks" To the '
 duckroom = 'You go inside the room and through the tunnel you see... one duck... a very large duck at that. ' \
-           '\nGreat, James is at it again. Why does he always do this. Oh great, there\'s the toaster.'
+           '\nGreat, James is at it again. Why does he always do this. Oh great, there\'s the toaster.\n' \
+           'To the south you can go to back to the trophy room...'
 
-# MANSION F1 OBJECTS START HERE!!!
+# MANSION F1 OBJECTS START HERE
 COURTYARD = Room('Mansion Courtyard', courtyard, 'MAINROOM', '', 'MANSIONENTRANCE', '', '', '')
-MAINROOM = Room()
-DININGROOM = Room()
-KITCHEN = Room()
-LIVINGROOM = Room()
-GARDEN = Room()
-TROPHYROOM = Room()
-DUCKROOM = Room()
-
-# MANSION F2 DESCRIPTIONS START HERE!!!
-
-# MANSION F2 OBJECTS START HERE!!!
-
-# MANSION B1 DESCRIPTIONS START HERE!!!
-
-# MANSION B1 OBJECTS START HERE!!!
+MAINROOM = Room('Great Atrium', mainroom, '', 'DININGROOM', 'COURTYARD', 'LIVINGROOM', 'F2HALLWAY', '')
+DININGROOM = Room('Dining Room', diningroom, '', '', 'KITCHEN', 'MAINROOM', '', '')
+KITCHEN = Room('Kitchen', kitchen, 'DININGROOM', '', '', '', '', '')
+LIVINGROOM = Room('Common Room', livingroom, 'TROPHYROOM', 'MAINROOM', 'GARDEN', '', '', '')
+GARDEN = Room('Pretty Garden', garden, 'LIVINGROOM', '', '', '', '', '')
+TROPHYROOM = Room('Trophy Room', trophyroom, '', '', 'LIVINGROOM', '', '', '')
+DUCKROOM = Room('Duck Room', duckroom, '', '', 'TROPHYROOM', '', '', '')
 
 # CONTROLLER CODE IS HERE!!!
 
@@ -136,7 +139,7 @@ while True:
     elif command in short_directions:
         pos = short_directions.index(command)
         command = directions[pos]
-    if command in directions:
+    elif command in directions:
         try:
             current_node.visited = True
             current_node.move(command)

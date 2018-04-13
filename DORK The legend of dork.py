@@ -333,7 +333,7 @@ while True:
     if not current_node.visited:
         print(current_node.description)
     command = input('>_').lower().strip()
-    
+
     if command == 'quit':
         quit(0)
 
