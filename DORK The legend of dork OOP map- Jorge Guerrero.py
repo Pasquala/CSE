@@ -97,7 +97,7 @@ garden = 'You step into a garden just outside of the mansion, but fenced into it
          'with splashes of magnificent, vibrant, glorious colors.\nTo the north is the door back into the common room.'
 trophyroom = 'You step the trophy room. The west wall has a glass case with dust except for 15 small circles that are' \
              'clear of any dust.\nOn the glass case there is a box that reads "Speak the name of the one lost to the ' \
-             'ducks" To the '
+             'ducks" To the south there is the doorway to the common room.'
 duckroom = 'You go inside the room and through the tunnel you see... one duck... a very large duck at that. ' \
            '\nGreat, James is at it again. Why does he always do this. Oh great, there\'s the toaster.\n' \
            'To the south you can go to back to the trophy room...'

@@ -250,9 +250,8 @@ LAKECAVE = Room('Crystal Cave', lakecave, '', '', '', '', 'LAKEROCK', '')
 southfields = 'You stumbled into a massive field! all around are little shiny objects such as rocks, ' \
               'you look north to see a mansion and more field to the west, leading into a dense forest.\n' \
               'To the east you can see the field leading into another forest but, this forest seems dead and desolate'
-westfields = 'You stand at the edge of a really green forest, you notice a considerably sturdy stick. ' \
-             'You look deeper into the forest and very easily hear the sound of a river rushing.\n' \
-             'To the north, you can go behind the house. ' \
+westfields = 'You stand at the edge of a really green forest, you look deeper into the forest and very easily hear 000000000000000' \
+             'the sound of a river rushing.\n To the north, you can go behind the house. ' \
              'To the south you can return to the south of the fields or, you can go venture into the forest.'
 eastfields = 'You stand at the edge of a thin forest, most the trees are dead and rotting. Though, parts of the ' \
              'forest are growing back and you can go east to venture in.\n' \
@@ -293,7 +292,9 @@ livingroom = ''
 garden = 'You step into a garden just outside of the mansion, but fenced into its own secluded area.]\n The air is ' \
          'filled with the sweet smell of nectar and despite the apparent age of the garden, the flowers are thriving ' \
          'with splashes of magnificent, vibrant, glorious colors.\nTo the north is the door back into the common room'
-trophyroom = ''
+trophyroom = 'You step the trophy room. The west wall has a glass case with dust except for 15 small circles that are' \
+             'clear of any dust.\nOn the glass case there is a box that reads "Speak the name of the one lost to the ' \
+             'ducks" To the south there is the doorway to the common room.'
 duckroom = 'You go inside the room and through the tunnel you see... one duck... a very large duck at that. ' \
            '\nGreat, James is at it again. Why does he always do this. Oh great, there\'s the toaster.'
 
@@ -320,7 +321,13 @@ potato = Food('Delicious potato', 'A very yummy potato', '', True)
 
 player_inv = [potato]
 key_inv = [magic_map]
-figurine_list = ['Mr. Wiebe', 'Wiebe "the01 duck" Wybe', 'Cheese God (not other friend???)', 'Gandwiebe the white',
+item_dictionary = {
+    'stick': {
+        'Room': WESTFIELDS,
+        'Desc': 'There is a sturdy stick near the entrance'
+    },
+}
+figurine_list = ['Mr. Wiebe', 'Wiebe "the duck" Wybe', 'Cheese God (not other friend???)', 'Gandwiebe the white',
                  'Mister Sir Man', 'Toaster', 'Troll eating smashed egg', 'Messed up bear', 'Great pyrenees', 'Mr. Wybe'
                  'Gas Station Wiebe', 'Teen Wiebe', 'One Duck', 'Guy playing Roblox', 'Problems (not friend???)']
 
@@ -360,7 +367,7 @@ while True:
     elif command == 'wiebe wybe':
         for wiebe in range(0, 99999):
             print('Mr. Wiebe')
-        print('The gates of Wiebe has been opened... within the walls of the mansion... within the room of rewards... '
+        print('The gates of Wiebe have been opened... within the walls of the mansion... within the room of rewards... '
               'a boon lies in wait')
         maple_syrup = KeyItem('Maple Syrup', 'Very good maple syrup! Super sweet', 'TROPHYROOM')
 
@@ -375,7 +382,8 @@ while True:
 
     elif command == 'pick up':
         item = input('What? ')
-        # if item in Item_Dictionary
+        if item in item_dictionary:
+            item.getpicked_up
 
     elif command in short_directions:
         pos = short_directions.index(command)
