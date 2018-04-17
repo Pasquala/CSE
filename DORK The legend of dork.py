@@ -24,48 +24,43 @@ class Room(object):
 
 
 class Item(object):
-    def __init__(self, name, desc, location):
+    def __init__(self, name, desc):
         self.name = name
         self.desc = desc
-        self.location = location
 
     def get_pick_upped(self):
         if len(player_inv) < 10:
             print('You grab the %s.' % self.name)
             player_inv.append(self)
-            self.location = ''
         elif len(player_inv) == 10:
             print('You have no space to carry the %s!' % self.name)
 
     def get_dropped(self):
         print('You set down the %s and give it a little pat.' % self.name)
         player_inv.remove(self)
-        self.location = current_node
 
     def get_looked_at(self):
         print(self.desc)
 
 
 class KeyItem(Item):
-    def __init__(self, name, desc, location):
-        super(KeyItem, self).__init__(name, desc, location)
+    def __init__(self, name, desc):
+        super(KeyItem, self).__init__(name, desc)
 
     def get_pick_upped(self):
         print('You grab the %s.' % self.name)
         key_inv.append(self)
-        self.location = ''
 
 
 class Food(Item):
-    def __init__(self, name, desc, location, tasty):
-        super(Food, self).__init__(name, desc, location)
+    def __init__(self, name, desc, tasty):
+        super(Food, self).__init__(name, desc)
         self.tasty = tasty
 
     def consume(self):
         if self in player_inv:
             if self.tasty:
                 print('You eat the %s.\nIt was really tasty!' % self.name)
-                self.location = ''
                 player_inv.remove(self)
             elif not self.tasty:
                 print('You eat the %s.\nIT WAS GROSS OH GOD IT WAS NASTY BLEHHHH! WHY DID YOU EAT THAT?!'
@@ -76,14 +71,13 @@ class Food(Item):
 
 
 class Drink(Food):
-    def __init__(self, name, desc, location, tasty):
-        super(Drink, self).__init__(name, desc, location, tasty)
+    def __init__(self, name, desc, tasty):
+        super(Drink, self).__init__(name, desc, tasty)
 
     def consume(self):
         if self in player_inv:
             if self.tasty:
                 print('You drink the %s.\nIt was really tasty!' % self.name)
-                self.location = ''
                 player_inv.remove(self)
             elif not self.tasty:
                 print('You drink the %s.\nIT WAS GROSS OH GOD IT WAS NASTY BLEHHHH! WHY DID YOU DRINK THAT?!'
@@ -94,15 +88,15 @@ class Drink(Food):
 
 
 class Toaster(KeyItem):
-    def __init__(self, name, desc, location):
-        super(Toaster, self).__init__(name, desc, location)
+    def __init__(self, name, desc):
+        super(Toaster, self).__init__(name, desc)
 
     def make_toast(self):
         if current_node == 'KITCHEN':
             print('You plug in the %s and you make some toast! It comes out and your look at the toast...\n'
                   'You see there are messages on the toast.\nYou try to make it out and it looks like a conversation '
                   'between two men and one of them is asking about a toaster' % self.name)
-            toast = Food('Toast', 'It be some good toast', '', True)
+            toast = Food('Toast', 'It be some good toast', True)
             if len(player_inv) > 10:
                 toast.get_pick_upped()
             else:
@@ -113,8 +107,8 @@ class Toaster(KeyItem):
 
 
 class Wearables(KeyItem):
-    def __init__(self, name, desc, location, fab):
-        super(Wearables, self).__init__(name, desc, location)
+    def __init__(self, name, desc, fab):
+        super(Wearables, self).__init__(name, desc)
         self.fab = fab
 
     def wear(self):
@@ -125,8 +119,8 @@ class Wearables(KeyItem):
 
 
 class Map(KeyItem):
-    def __init__(self, name, desc, location):
-        super(Map, self).__init__(name, desc, location)
+    def __init__(self, name, desc):
+        super(Map, self).__init__(name, desc)
 
     def fast_travel(self):
         print('You open the %s and look at it. The map is filled in with the rooms you have been in before and rooms'
@@ -164,8 +158,8 @@ class Map(KeyItem):
 
 
 class ShrinkRay(KeyItem):
-    def __init__(self, name, desc, location):
-        super(ShrinkRay, self).__init__(name, desc, location)
+    def __init__(self, name, desc):
+        super(ShrinkRay, self).__init__(name, desc)
 
     def shrink_stuff(self):
         print('you look over the %s and realize it looks like it functions like a gun. you point at a nearby piece of '
@@ -173,8 +167,8 @@ class ShrinkRay(KeyItem):
 
 
 class Figurine(KeyItem):
-    def __init__(self, name, desc, location):
-        super(Figurine, self).__init__(name, desc, location)
+    def __init__(self, name, desc):
+        super(Figurine, self).__init__(name, desc)
 
     def get_pick_upped(self):
         print('You see the glint of a figurine, you pick it up and look at it. It\'s a limited edition %s Figurine!' %
@@ -185,11 +179,11 @@ class Figurine(KeyItem):
 
 
 class Character(object):
-    def __init__(self, name, description, dialogue, item, affinity):
+    def __init__(self, name, description, dialogue, held_item, affinity):
         self.name = name
         self.description = description
         self.dialogue = dialogue
-        self.item = item
+        self.item = held_item
         self.affinity = affinity
         if self.item != '':
             self.holding = True
@@ -250,7 +244,7 @@ LAKECAVE = Room('Crystal Cave', lakecave, '', '', '', '', 'LAKEROCK', '')
 southfields = 'You stumbled into a massive field! all around are little shiny objects such as rocks, ' \
               'you look north to see a mansion and more field to the west, leading into a dense forest.\n' \
               'To the east you can see the field leading into another forest but, this forest seems dead and desolate'
-westfields = 'You stand at the edge of a really green forest, you look deeper into the forest and very easily hear 000000000000000' \
+westfields = 'You stand at the edge of a really green forest, you look deeper into the forest and very easily hear ' \
              'the sound of a river rushing.\n To the north, you can go behind the house. ' \
              'To the south you can return to the south of the fields or, you can go venture into the forest.'
 eastfields = 'You stand at the edge of a thin forest, most the trees are dead and rotting. Though, parts of the ' \
@@ -315,17 +309,17 @@ short_directions = ['n', 'e', 's', 'w', 'u', 'd']
 
 magic_map = Map('Old Map', 'A very strange map. The more you walk, the more it fills itself in. on the bottom it reads '
                            '"Speak the word of movement. Focus your mind and say the word teleport. '
-                           'The map will heed your call and take you with gilded wings"', '')
+                           'The map will heed your call and take you with gilded wings"')
 
-potato = Food('Delicious potato', 'A very yummy potato', '', True)
+potato = Food('Delicious potato', 'A very yummy potato', True)
 
 player_inv = [potato]
 key_inv = [magic_map]
 item_dictionary = {
-    'stick': {
-        'Room': WESTFIELDS,
-        'Desc': 'There is a sturdy stick near the entrance'
-    },
+    'potato': potato
+}
+item_location_dictionary = {
+    'potato': QUIETMEADOW
 }
 figurine_list = ['Mr. Wiebe', 'Wiebe "the duck" Wybe', 'Cheese God (not other friend???)', 'Gandwiebe the white',
                  'Mister Sir Man', 'Toaster', 'Troll eating smashed egg', 'Messed up bear', 'Great pyrenees', 'Mr. Wybe'
@@ -369,7 +363,7 @@ while True:
             print('Mr. Wiebe')
         print('The gates of Wiebe have been opened... within the walls of the mansion... within the room of rewards... '
               'a boon lies in wait')
-        maple_syrup = KeyItem('Maple Syrup', 'Very good maple syrup! Super sweet', 'TROPHYROOM')
+        maple_syrup = KeyItem('Maple Syrup', 'Very good maple syrup! Super sweet')
 
     # Needed stuffs
 
@@ -382,8 +376,9 @@ while True:
 
     elif command == 'pick up':
         item = input('What? ')
-        if item in item_dictionary:
-            item.getpicked_up
+        if item in item_dictionary and current_node == item_location_dictionary[item]:
+            item = item_dictionary[item]
+            item.get_pick_upped()
 
     elif command in short_directions:
         pos = short_directions.index(command)
