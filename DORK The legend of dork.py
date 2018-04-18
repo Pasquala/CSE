@@ -2,7 +2,6 @@
 
 # ROOM CLASSES
 
-
 class Room(object):
     def __init__(self, name, description, north, east, south, west, up, down):
         self.name = name
@@ -279,7 +278,8 @@ courtyard = 'You step into the courtyard and looking around, the courtyard is so
             'open area perfect to stand in and be engulfed in a warm blanket of sunlight!'
 mainroom = 'Stepping inside the actual mansion, the air is cool and still, with very little sound... It brings you ' \
            'peace and tranquility, you feel relaxed.\nThe room is furnished with some beautiful antique furniture ' \
-           'and the floor is covered in an elegant carpet with intricate designs near the edges.'
+           'and the floor is covered in an elegant carpet with intricate designs near the edges. \nTo the east there' \
+           'is the path '
 diningroom = ''
 kitchen = ''
 livingroom = ''
@@ -330,6 +330,7 @@ while True:
 
     # Room desc stuffs
 
+    print('')
     print(current_node.name)
     if not current_node.visited:
         print(current_node.description)
@@ -363,7 +364,9 @@ while True:
             print('Mr. Wiebe')
         print('The gates of Wiebe have been opened... within the walls of the mansion... within the room of rewards... '
               'a boon lies in wait')
-        maple_syrup = KeyItem('Maple Syrup', 'Very good maple syrup! Super sweet')
+        maple_syrup = KeyItem('Maple Syrup', 'Very good maple syrup! Super sweet!')
+        item_dictionary['maple syrup'] = maple_syrup
+        item_location_dictionary['maple syrup'] = TROPHYROOM
 
     # Needed stuffs
 
@@ -371,14 +374,25 @@ while True:
         magic_map.fast_travel()
 
     elif command == 'inventory' or command == 'inv' or command == 'i':
+        inv_len = 10 - len(player_inv)
+        print('Inventory(%s)' % inv_len)
         for item in player_inv:
             print(item.name)
+        print('')
+        print('Key inventory')
+        for item in key_inv:
+            print(item.name)
 
-    elif command == 'pick up':
-        item = input('What? ')
-        if item in item_dictionary and current_node == item_location_dictionary[item]:
-            item = item_dictionary[item]
+    elif command == 'pick up' or 'take':
+        found = False
+        item_name = input('What? ')
+        if item_name in item_dictionary and current_node == item_location_dictionary[item_name]:
+            item = item_dictionary[item_name]
             item.get_pick_upped()
+            del item_dictionary[item_name]
+            found = True
+        if not found:
+            print("Not Found.")
 
     elif command in short_directions:
         pos = short_directions.index(command)
