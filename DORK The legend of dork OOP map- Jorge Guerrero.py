@@ -112,6 +112,20 @@ GARDEN = Room('Pretty Garden', garden, 'LIVINGROOM', '', '', '', '', '')
 TROPHYROOM = Room('Trophy Room', trophyroom, '', '', 'LIVINGROOM', '', '', '')
 DUCKROOM = Room('Duck Room', duckroom, '', '', 'TROPHYROOM', '', '', '')
 
+# GREEN FOREST STARTS HERE!!!
+
+
+# GREEN FOREST DESCRIPTIONS START HERE
+lush_entrance = ''
+dense_forest = ''
+denser_forest = ''
+denserer_forest = ''
+tree_guard = ''
+river_bank = ''
+quiet_grove = ''
+sanctuary = ''
+# GREEN FOREST OBJECTS START HERE
+
 # CONTROLLER CODE IS HERE!!!
 
 current_node = QUIETMEADOW
